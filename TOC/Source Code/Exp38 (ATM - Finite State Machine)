@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+    int pin, amount;
+    int balance = 10000;
+    printf("Enter PIN: ");
+    scanf("%d", &pin);
+    if(pin != 1234)
+    {
+        printf("Invalid PIN\n");
+        return 0;
+    }
+    printf("Enter withdrawal amount: ");
+    scanf("%d", &amount);
+    if(amount <= balance)
+    {
+        balance -= amount;
+        printf("Transaction Successful\n");
+        printf("Remaining Balance = %d\n", balance);
+    }
+    else
+    {
+        printf("Insufficient Balance\n");
+    }
+    return 0;
+}

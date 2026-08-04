@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str[20];
+    printf("Enter the string: ");
+    scanf("%s", str);
+    if(strcmp(str, "bc") == 0 ||
+       strcmp(str, "c") == 0 ||
+       strcmp(str, "bcaaa") == 0)
+        printf("String Accepted\n");
+    else
+        printf("String Rejected\n");
+
+    return 0;
+}

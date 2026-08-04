@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main()
+{
+    int choice;
+    float money;
+
+    printf("----- VENDING MACHINE -----\n");
+    printf("1. Tea (Rs.10)\n");
+    printf("2. Coffee (Rs.15)\n");
+    printf("3. Juice (Rs.20)\n");
+
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    printf("Insert Money: ");
+    scanf("%f", &money);
+
+    switch(choice)
+    {
+        case 1:
+            if(money >= 10)
+                printf("Tea Dispensed\n");
+            else
+                printf("Insufficient Money\n");
+            break;
+
+        case 2:
+            if(money >= 15)
+                printf("Coffee Dispensed\n");
+            else
+                printf("Insufficient Money\n");
+            break;
+
+        case 3:
+            if(money >= 20)
+                printf("Juice Dispensed\n");
+            else
+                printf("Insufficient Money\n");
+            break;
+
+        default:
+            printf("Invalid Choice\n");
+    }
+
+    return 0;
+}

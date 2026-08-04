@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str[100];
+    int i, a = 0, b = 0;
+    printf("Enter the string: ");
+    scanf("%s", str);
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] == 'a')
+            a++;
+        else if(str[i] == 'b')
+            b++;
+        else
+        {
+            printf("Invalid Input\n");
+            return 0;
+        }
+    }
+    if(a % 2 == 0 && b % 2 != 0)
+        printf("String Accepted\n");
+    else
+        printf("String Rejected\n");
+
+    return 0;
+}

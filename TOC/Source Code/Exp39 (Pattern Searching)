@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char text[100], pattern[50];
+    printf("Enter the text: ");
+    scanf("%s", text);
+    printf("Enter the pattern: ");
+    scanf("%s", pattern);
+    if(strstr(text, pattern) != NULL)
+        printf("Pattern Found\n");
+    else
+        printf("Pattern Not Found\n");
+    return 0;
+}
